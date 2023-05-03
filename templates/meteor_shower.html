@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{{ title }}
+
+{% block content %}
+<div class="content">
+    <p>{{ shower.name }}</p>
+    <p>Observation Start Date: {{ shower.observation_start_date }}</p>
+    <p>Observation End Date: {{ shower.observation_end_date }}</p>
+    <p>Alpha: {{ shower.alpha }}</p>
+    <p>Beta: {{ shower.beta }}</p>
+    <p>Pick Date: {{ shower.pick_date }}</p>
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{{ title }}
+
+{% block content %}
+<div class="content">
+    <div class="shower_cell">
+        {% for shower in showers %}
+        <p class="shower_name">
+            <a href="{{ url_for('get_shower_by_name', shower_name=shower.name) }}">
+                {{ shower.name }}
+            </a>
+        </p>
+        <p class="observation_dates">
+            Observation date: <br>  
+            {{shower.observation_start_date}} - {{shower.observation_end_date}}
+        </p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

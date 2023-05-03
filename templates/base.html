@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pathway+Extreme&display=swap" rel="stylesheet">
+    <title>{{ title }}</title>
+</head>
+
+<body>
+    <nav class="navigation_bar">
+        <ul>
+            <li>
+                <a href="{{ url_for('main') }}">Home</a>
+            </li>
+            <li>
+                <a href="{{ url_for('get_list_shower') }}">Meteors showers</a>
+            </li>
+            <li>
+                <a href="">
+                    About
+                </a>
+            </li>
+        </ul>
+    </nav>
+    {%block content%}
+
+    {%endblock%}
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer">
+                <ul>
+                    <li>
+                        <a href="{{ url_for('main') }}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('get_list_shower') }}">Meteors showers</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            About
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
